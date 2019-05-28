@@ -24,6 +24,12 @@ public class Game {
                 } else {
                     System.out.println("lose");
                 }
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Do You want to exit");
+            String playAgain = scan.next();
+            if("yes".equalsIgnoreCase(playAgain)){
+                break;
+            }
         }
     }
 }
