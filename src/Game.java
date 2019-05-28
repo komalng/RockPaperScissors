@@ -3,14 +3,11 @@ import java.util.*;
 public class Game {
     public static void main(String[] args) {
         while(true) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Enter your guess word:- ");
-            String userInput = scanner.next();
+            String userInput = getInput();
             List<String> listOfWords = Arrays.asList("Rock", "Paper", "Scissors");
             Random random = new Random();
             int randomNumber = random.nextInt(listOfWords.size());
             String computerChoice = listOfWords.get(randomNumber);
-            System.out.println(computerChoice);
 
             if (computerChoice.equalsIgnoreCase(userInput)) {
                 System.out.println("Draw");
@@ -31,5 +28,10 @@ public class Game {
                 break;
             }
         }
+    }
+    public static  String getInput(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your guess word:- ");
+        return scanner.next();
     }
 }
