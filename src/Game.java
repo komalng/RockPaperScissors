@@ -22,8 +22,8 @@ public class Game {
                     System.out.println("lose");
                 }
 
-            String playAgain = getPlayAgain();
-            if("yes".equalsIgnoreCase(playAgain)){
+            String continueOrNot = getChoiceForPlay();
+            if("yes".equalsIgnoreCase(continueOrNot)){
                 break;
             }
         }
@@ -33,7 +33,7 @@ public class Game {
         System.out.println("Enter your guess word:- ");
         return scanner.next();
     }
-    public static String getPlayAgain(){
+    public static String getChoiceForPlay(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Do You want to exit");
         return scanner.next();
