@@ -6,18 +6,7 @@ public class Game {
             String userInput = getInput();
             String computerChoice = getComputerChoice();
 
-            if (computerChoice.equalsIgnoreCase(userInput)) {
-                System.out.println("Draw");
-            } else if (!computerChoice.equalsIgnoreCase(userInput))
-                if (computerChoice.equalsIgnoreCase("rock") && userInput.equalsIgnoreCase("paper")) {
-                    System.out.println("Win");
-                } else if (computerChoice.equalsIgnoreCase("Scissors") && userInput.equalsIgnoreCase("Rock")) {
-                    System.out.println("Win");
-                } else if (computerChoice.equalsIgnoreCase("paper") && userInput.equalsIgnoreCase("Scissors")) {
-                    System.out.println("Win");
-                } else {
-                    System.out.println("lose");
-                }
+            System.out.println(getResult(userInput,computerChoice));
 
             String continueOrNot = getChoiceForPlay();
             if("yes".equalsIgnoreCase(continueOrNot)){
@@ -40,5 +29,20 @@ public class Game {
         Random random = new Random();
         int randomNumber = random.nextInt(listOfWords.size());
         return  listOfWords.get(randomNumber);
+    }
+    public static String getResult(String userInput,String computerChoice){
+        if (computerChoice.equalsIgnoreCase(userInput)) {
+           return "Draw";
+        } else if (!computerChoice.equalsIgnoreCase(userInput))
+            if (computerChoice.equalsIgnoreCase("rock") && userInput.equalsIgnoreCase("paper")) {
+               return "Win";
+            } else if (computerChoice.equalsIgnoreCase("Scissors") && userInput.equalsIgnoreCase("Rock")) {
+                return "Win";
+            } else if (computerChoice.equalsIgnoreCase("paper") && userInput.equalsIgnoreCase("Scissors")) {
+                return "Win";
+            }
+               return "lose";
+
+
     }
 }
