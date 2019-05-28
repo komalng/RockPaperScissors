@@ -1,9 +1,14 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Game {
     public static void main(String[] args) {
-        Scanner myObject = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your guess word:- ");
-        String userInput = myObject.next();
+        String userInput = scanner.next();
+        List<String> listOfWords = Arrays.asList("Rock","Paper","Scissors");
+        Random random = new Random();
+        int randomNumber = random.nextInt(listOfWords.size());
+        System.out.println(listOfWords.get(randomNumber));
+
     }
 }
