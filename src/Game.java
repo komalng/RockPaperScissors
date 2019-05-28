@@ -8,19 +8,20 @@ public class Game {
         List<String> listOfWords = Arrays.asList("Rock","Paper","Scissors");
         Random random = new Random();
         int randomNumber = random.nextInt(listOfWords.size());
-        System.out.println(listOfWords.get(randomNumber));
+        String computerChoice = listOfWords.get(randomNumber);
+        System.out.println(computerChoice);
 
-        if(listOfWords.get(randomNumber).equalsIgnoreCase(userInput)){
+        if(computerChoice.equalsIgnoreCase(userInput)){
             System.out.println("Draw");
         }
-        else if (!listOfWords.get(randomNumber).equalsIgnoreCase(userInput))
-            if (listOfWords.get(randomNumber).equalsIgnoreCase("rock") && userInput.equalsIgnoreCase("paper")) {
+        else if (!computerChoice.equalsIgnoreCase(userInput))
+            if (computerChoice.equalsIgnoreCase("rock") && userInput.equalsIgnoreCase("paper")) {
                 System.out.println("Win");
             }
-            else if(listOfWords.get(randomNumber).equalsIgnoreCase("Scissors") && userInput.equalsIgnoreCase("Rock")){
+            else if(computerChoice.equalsIgnoreCase("Scissors") && userInput.equalsIgnoreCase("Rock")){
                 System.out.println("Win");
             }
-            else if(listOfWords.get(randomNumber).equalsIgnoreCase("paper") && userInput.equalsIgnoreCase("Scissors")){
+            else if(computerChoice.equalsIgnoreCase("paper") && userInput.equalsIgnoreCase("Scissors")){
                 System.out.println("Win");
             }
     }
