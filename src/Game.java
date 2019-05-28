@@ -4,10 +4,7 @@ public class Game {
     public static void main(String[] args) {
         while(true) {
             String userInput = getInput();
-            List<String> listOfWords = Arrays.asList("Rock", "Paper", "Scissors");
-            Random random = new Random();
-            int randomNumber = random.nextInt(listOfWords.size());
-            String computerChoice = listOfWords.get(randomNumber);
+            String computerChoice = getComputerChoice();
 
             if (computerChoice.equalsIgnoreCase(userInput)) {
                 System.out.println("Draw");
@@ -37,5 +34,11 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Do You want to exit");
         return scanner.next();
+    }
+    public static String getComputerChoice(){
+        List<String> listOfWords = Arrays.asList("Rock", "Paper", "Scissors");
+        Random random = new Random();
+        int randomNumber = random.nextInt(listOfWords.size());
+        return  listOfWords.get(randomNumber);
     }
 }
