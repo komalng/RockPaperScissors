@@ -10,5 +10,18 @@ public class Game {
         int randomNumber = random.nextInt(listOfWords.size());
         System.out.println(listOfWords.get(randomNumber));
 
+        if(listOfWords.get(randomNumber).equalsIgnoreCase(userInput)){
+            System.out.println("Draw");
+        }
+        else if (!listOfWords.get(randomNumber).equalsIgnoreCase(userInput))
+            if (listOfWords.get(randomNumber).equalsIgnoreCase("rock") && userInput.equalsIgnoreCase("paper")) {
+                System.out.println("Win");
+            }
+            else if(listOfWords.get(randomNumber).equalsIgnoreCase("Scissors") && userInput.equalsIgnoreCase("Rock")){
+                System.out.println("Win");
+            }
+            else if(listOfWords.get(randomNumber).equalsIgnoreCase("paper") && userInput.equalsIgnoreCase("Scissors")){
+                System.out.println("Win");
+            }
     }
 }
