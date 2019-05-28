@@ -24,5 +24,8 @@ public class Game {
             else if(computerChoice.equalsIgnoreCase("paper") && userInput.equalsIgnoreCase("Scissors")){
                 System.out.println("Win");
             }
+            else{
+                System.out.println("lose");
+            }
     }
 }
